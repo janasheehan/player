@@ -9,7 +9,6 @@ const MusicPlayer = ({ playlist, allSongs }) => {
   const [progress, setProgress] = useState(0);
   const [lastSong, setLastSong] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isError, setIsError] = useState(false);
   const [isShuffle, setIsShuffle] = useState(false);
   const [availableShuffleChoice, setShuffleSongs] = useState(allSongs);
 
