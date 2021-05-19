@@ -1,0 +1,257 @@
+:root {
+  --active-color: #e0e0e0;
+  --dormant-color: rgba(255,255,255,0.3);
+  --bg-color: #222;
+  --invisible: rgba(0,0,0,0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 100;
+  background: var(--bg-color);
+  color: var(--active-color);
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  height: 1px;
+  -webkit-appearance: none;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-color);
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+.header, .track, .info {
+  max-width: 600px;
+}
+
+.track {
+  padding: 0 0.5em;
+  margin: 0 auto;
+}
+
+.album-cover {
+  height:2.5em;
+  width:2.5em;
+  border-radius: 50%;
+  display: block;
+  margin:0.2em 1.5em 0 0
+}
+
+.header .album-cover {
+  margin: auto;
+  height: 150px;
+  width: 150px;
+  display: none;
+}
+
+.details {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width:400px;
+  padding-left:100px;
+  margin: 0 auto;
+  padding: 1em 2em;
+}
+
+.player {
+  width:230px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls-mobile {
+  width:100%;
+  padding: 1.4em 1em 1em;
+}
+
+.player-mobile {
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+}
+
+.controls .play svg,
+.controls .pause svg,
+.controls-mobile .play svg,
+.controls-mobile .pause svg  {
+  width: 25px;
+  height: 25px;
+}
+
+.controls .shuffle svg,
+.controls-mobile .shuffle svg {
+  width: 30px;
+  height: 30px;
+}
+
+.controls .prev svg,
+.controls .next svg,
+.controls-mobile .prev svg,
+.controls-mobile .next svg {
+  width: 20px;
+  height: 20px;
+}
+
+.controls .shuffle svg {
+  margin-left:60px
+}
+
+.controls path,
+.controls-mobile path {
+  fill: var(--active-color);
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid var(--active-color);
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background: var(--active-color);
+  cursor: pointer;
+  margin-top: 0px; /* Margin needed in Chrome, automatic in Firefox and IE */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  border: 1px solid var(--active-color);
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background: var(--active-color);
+  margin-top: 14px;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  border: 1px solid var(--active-color);
+  height: 10px;
+  width: 10px;
+  margin-top: -14px;
+  border-radius: 50%;
+  background: var(--active-color);
+  cursor: pointer;
+}
+
+.info {
+  margin: 0 auto;
+  cursor: pointer;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  line-height:2.2em;
+}
+
+.info span {
+  letter-spacing:0.7px;
+  font-size: 1.1em;
+  padding-top: 4px;
+  padding-bottom: 6px;
+  border:1px solid var(--invisible);
+}
+
+.info .highlight-left,
+.highlight-right-xs {
+  padding-left:8px;
+}
+
+.info .highlight-right {
+  padding-right:8px;
+}
+
+.info:hover .highlight-left {
+  border-left:1px solid var(--dormant-color);
+  border-bottom:1px solid var(--dormant-color);
+  border-top:1px solid var(--dormant-color);
+}
+
+.info:hover .highlight-right {
+  border-right:1px solid var(--dormant-color);
+  border-bottom:1px solid var(--dormant-color);
+  border-top:1px solid var(--dormant-color);
+}
+
+.highlight-right-xs {
+  display:none;
+}
+
+/* offset the topmost element if screen is tall enough */
+@media only screen and (min-height: 1024px) {
+  .header  {
+    margin-top:4em
+  } 
+}
+
+/* organize song list info for narrow screen */
+@media only screen and (max-width: 1024px) {
+  .info {
+    flex-direction: column;
+    line-height: 0.9em;
+    padding:0;
+    margin:0;
+  }
+  .info span{
+    font-size: 0.9em;
+    padding:2px
+  }
+  .info .highlight-right,
+  .info .highlight-left {
+    display:none;
+  }
+  .artist{
+    margin-top:1px
+  }
+  .track {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:1.5em;
+  }
+}
+
+/* adjust header and show album are for landscape on mobile */
+@media only screen and (min-height: 768px) {
+  .controls {
+    padding:2em 0 2em 100px; 
+  } 
+  
+  .header .album-cover {
+    display:block;
+  }
+}
+
+/* shrink the album art in header for phone */
+@media only screen and (max-width: 768px) {
+  .header .album-cover {
+    height: 130px;
+    width: 130px;
+  }
+}
