@@ -7,11 +7,7 @@
 4. I have not been able to get rid of the Error: Could not load module jest-resolve/build/default_resolve
 
 
-# Boundless take-home test - Music Player
 
-![Music Player](./music_player.gif)
-
-The goal of this exercise is to create a music player in React.
 
 ## Provided Materials
 
@@ -102,3 +98,9 @@ Please take as much time as you would like to. Once you feel your solution is co
 ## Questions
 
 If you have any questions about this problem or about your interview process reach out to [code@boundless.com](mailto:code@boundless.com) or the Boundless engineer who sent you the repo.
+
+# Boundless take-home test - Music Player
+
+![Music Player](./music_player.gif)
+
+The goal of this exercise is to create a music player in React.
