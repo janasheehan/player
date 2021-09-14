@@ -29,8 +29,7 @@
     "clean-css-brunch": "^3.0.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "jest": "^26.6.2",
-    "jest-resolve": "^26.6.2",
+    "jest": "^23.0.0",
     "jsdom": "^13.2.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^6.2.3",
@@ -38,5 +37,8 @@
     "raf": "^3.4.1",
     "ts-node": "^9.1.1",
     "uglify-js-brunch": "^2"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }

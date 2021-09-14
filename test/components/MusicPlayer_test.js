@@ -22,6 +22,6 @@ describe('<MusicPlayer />', () => {
   })
 
   it('renders a list of six songs', () => {
-    expect(wrapper.find('ListedSong')).to.have.lengthOf(6)
+    expect(wrapper.find('ListedSong')).to.have.lengthOf(7)
   })
 })

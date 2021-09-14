@@ -128,10 +128,10 @@ require.register("child_process", function(exports, require, module) {
 require.register("tls", function(exports, require, module) {
   module.exports = {};
 });
-require.register("repl", function(exports, require, module) {
+require.register("readline", function(exports, require, module) {
   module.exports = {};
 });
-require.register("readline", function(exports, require, module) {
+require.register("tty", function(exports, require, module) {
   module.exports = {};
 });
 var process;
@@ -537,18 +537,13 @@ var MusicPlayer = function MusicPlayer(_ref) {
 
   var _useState9 = (0, _react.useState)(false),
       _useState10 = _slicedToArray(_useState9, 2),
-      isError = _useState10[0],
-      setIsError = _useState10[1];
+      isShuffle = _useState10[0],
+      setIsShuffle = _useState10[1];
 
-  var _useState11 = (0, _react.useState)(false),
+  var _useState11 = (0, _react.useState)(allSongs),
       _useState12 = _slicedToArray(_useState11, 2),
-      isShuffle = _useState12[0],
-      setIsShuffle = _useState12[1];
-
-  var _useState13 = (0, _react.useState)(allSongs),
-      _useState14 = _slicedToArray(_useState13, 2),
-      availableShuffleChoice = _useState14[0],
-      setShuffleSongs = _useState14[1]; // selected song details
+      availableShuffleChoice = _useState12[0],
+      setShuffleSongs = _useState12[1]; // selected song details
 
 
   var _playlist$currentInde = playlist[currentIndex],
@@ -826,6 +821,7 @@ require.alias("querystring-es3/index.js", "querystring");
 require.alias("stream-browserify/index.js", "stream");
 require.alias("string_decoder/lib/string_decoder.js", "string_decoder");
 require.alias("util/util.js", "sys");
+require.alias("tty-browserify/index.js", "tty");
 require.alias("url/url.js", "url");
 require.alias("vm-browserify/index.js", "vm");process = require('process');require.register("___globals___", function(exports, require, module) {
   
