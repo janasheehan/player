@@ -79,28 +79,3 @@ Run `npm install` to download the dependencies, and then `npm start` then open t
 As currently configured, the starting point for brunch is at `app/assets/index.html`.
 
 Please feel free to add any additional libraries or tools as you see fit. For example, [howler.js](https://github.com/goldfire/howler.js) can help you handle audio playback. If you make any changes to the build process that require different steps for viewing your solution, please document those steps clearly.
-
-## Evaluation Criteria
-
-- **Implementation considerations:** please include a discussion of the thinking you went through in designing your solution. We're eager to hear about your thought process! It will help us be on the same page with you when reviewing your solution.
-- **Well-factored code:** readability, maintainability, and design concepts like single responsibility are important for us in addition to a functioning solution. Please employ good componentization practices and organize your components and files as you see fit.
-- **Handling invalid input and error conditions**: make sure to handle important error conditions with helpful messages for the user about how to recover from these errors and use your program.
-- **How do you manage application-wide state?**: please include a discussion of your thoughts around React state management and what your thought process was for this challenge.
-- **Styling proficiency**: demonstrate your CSS skills and creativity.
-- **Testing**: how will you test the application? Please include a discussion of your thought process around testing and what you chose to do for this app.
-
-Code is often easier to write than it is to read. We appreciate the use of white space and clear variable and method names to help us understand your solution.
-
-## Submitting your solution
-
-Please take as much time as you would like to. Once you feel your solution is complete, zip up the file and return it via email to the person that sent it to you. If the file cannot be sent over email, upload it to a google drive and send us the link. Good luck and have fun!
-
-## Questions
-
-If you have any questions about this problem or about your interview process reach out to [code@boundless.com](mailto:code@boundless.com) or the Boundless engineer who sent you the repo.
-
-# Boundless take-home test - Music Player
-
-![Music Player](./music_player.gif)
-
-The goal of this exercise is to create a music player in React.
